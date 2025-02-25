@@ -13,28 +13,23 @@ export default ({ sceneName, gamma, resolution, reflections, onParamChange, onSt
         </h2>
 
         <h3>
-          Author
+          
         </h3>
         <span>
-          Alessandro Genova
+          
         </span>
 
         <h3>
-          Core Library
         </h3>
         <span>
-          <a href="https://github.com/alesgenova/ray-tracer" target="_blank">Source</a>
+
           <br />
-          (rust)
         </span>
 
         <h3>
-          Demo App
         </h3>
         <span>
-          <a href="https://github.com/alesgenova/ray-tracer-app" target="_blank">Source</a>
           <br />
-          (wasm, react)
         </span>
 
         <br />

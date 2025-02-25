@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "http://alesgenova.github.io/ray-tracer-app",
+  "homepage": "http://bh3gei.github.io/ray-tracer-app",
   "private": true,
   "dependencies": {
     "@babel/preset-env": "^7.12.11",
@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build:worker": "rollup -c",
-    "start": "npm run build:worker && react-scripts start",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "build": "npm run build:worker && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
