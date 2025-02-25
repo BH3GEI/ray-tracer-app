@@ -62,6 +62,7 @@ pub struct Hitable {
 
 #[wasm_bindgen]
 impl Hitable {
+    //几何体
     pub fn sphere(radius: f64) -> Self {
         Hitable {
             wrapped: Box::new(Sphere::new(radius)),
@@ -117,6 +118,7 @@ pub struct Material {
 
 #[wasm_bindgen]
 impl Material {
+    //材质
     pub fn plain(texture: Texture) -> Self {
         Material {
             wrapped: Box::new(PlainMaterial::<f64>::new(texture.wrapped)),
@@ -171,7 +173,7 @@ impl Scene {
             wrapped: Box::new(SceneInternal::<f64>::new()),
         }
     }
-
+    //场景管理
     pub fn add_actor(&mut self, actor: Actor) {
         self.wrapped.add_actor(*actor.wrapped);
     }
@@ -251,7 +253,7 @@ impl Renderer {
             )),
         }
     }
-
+    //渲染控制
     pub fn render(&self, scene: &Scene, camera: &Camera, image: &mut [f64]) {
         let inner_image = self.wrapped.render(&scene.wrapped, &*camera.wrapped);
         for i in 0..self.width * self.height * 3 {
